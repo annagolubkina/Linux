@@ -1,0 +1,98 @@
+~$pwd
+/home/ubuntu
+~$cd ..
+home$
+home$ls
+ubuntu
+home$cd /home/ubuntu
+~$mkdir first
+~$ls
+first
+~$mkdir second
+~$ls
+first  second
+~$cd /home/ubuntu/first
+first$echo > first.py
+first$ls
+first.py
+first$echo 1 > first.py
+first$less first.py
+~$cd /home/ubuntu/second
+second$echo 2 > second.py
+second$less second
+second$less second.py
+second$cd ..
+~$mv second.py > /home/ubuntu/first
+-bash: /home/ubuntu/first: Is a directory
+~$cd /home/ubuntu/first/
+first$ls
+first.py
+first$cd..
+cd..: command not found
+first$cd ..
+~$cd /home/ubuntu/first
+first$ls
+first.py
+first$cd ..
+~$mv /home/ubuntu/second/second.py /home/ubuntu/first/
+~$cd /home/ubuntu/first/
+first$ls
+first.py  second.py
+first$cd ..
+~$rm -r /home/ubuntu/second/
+~$ls
+first
+~$mv first first_second
+~$ls
+first_second
+~$rm -r first_second
+~$ls
+~$history
+    1  clear
+    2  PS1="\W$"
+    3  clear
+    4  pwd
+    5  cd ..
+    6  ls
+    7  mkdir first
+    8  cd /home/ubuntu
+    9  mkdir first
+   10  ls
+   11  mkdir second
+   12  ls
+   13  cd /home/ubuntu/first
+   14  echo > first.py
+   15  ls
+   16  echo 1 > first.py
+   17  less first.py
+   18  cd hoe/ubuntu/second
+   19  cd ..
+   20  cd /home/ubuntu/second
+   21  echo 2 > second.py
+   22  less second
+   23  less second.py
+   24  cd ..
+   25  mv second.py > /home/ubuntu/first
+   26  cd /home/ubuntu/first/
+   27  ls
+   28  cd..
+   29  cd ..
+   30  cd /home/ubuntu/first
+   31  ls
+   32  cd ..
+   33  /home/ubuntu/second
+   34  /home/ubuntu/second/
+   35  cd /home/ubuntu/second
+   36  ls
+   37  mv /home/ubuntu/second/second.py /home/ubuntu/first/
+   38  cd /home/ubuntu/first/
+   39  ls
+   40  cd ..
+   41 rm -r /home/ubuntu/second/
+   42  ls
+   43  mv first first_second
+   44  ls
+   45  rm -r first_second
+   46  ls
+   47  history
+~$                                                                                                                                                                                                                                           
