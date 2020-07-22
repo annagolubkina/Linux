@@ -1,0 +1,71 @@
+MacBook-Air-Anna:lesson3 anna$ vim first.py
+MacBook-Air-Anna:lesson3 anna$ ls
+cp.txt		first.py	lines.txt	lines_copy.txt	lines_out.txt	test_copy.txt
+MacBook-Air-Anna:lesson3 anna$ cat first.py
+print(Hello world!)
+MacBook-Air-Anna:lesson3 anna$ cat first.py | wc -l
+       1
+MacBook-Air-Anna:lesson3 anna$ vim second.py 
+MacBook-Air-Anna:lesson3 anna$ ls
+cp.txt		first.py	lines.txt	lines_copy.txt	lines_out.txt	second.py	test_copy.txt
+MacBook-Air-Anna:lesson3 anna$ cat second.py
+print(Linear regression)
+MacBook-Air-Anna:lesson3 anna$ cat first.py second.py | third.py
+-bash: third.py: command not found
+MacBook-Air-Anna:lesson3 anna$ cat first.py second.py >  third.py
+MacBook-Air-Anna:lesson3 anna$ ls
+cp.txt		lines.txt	lines_out.txt	test_copy.txt
+first.py	lines_copy.txt	second.py	third.py
+MacBook-Air-Anna:lesson3 anna$ cat third.py
+print(Hello world!)
+print(Linear regression)
+MacBook-Air-Anna:lesson3 anna$ cat third.py | wc -l
+       2
+MacBook-Air-Anna:lesson3 anna$ cat -b third.py
+     1	print(Hello world!)
+     2	print(Linear regression)
+MacBook-Air-Anna:lesson3 anna$ vim first.py
+MacBook-Air-Anna:lesson3 anna$ vim second.py
+MacBook-Air-Anna:lesson3 anna$ vim ex_1.txt
+MacBook-Air-Anna:lesson3 anna$ vim ex_2.txt
+MacBook-Air-Anna:lesson3 anna$ cat ex_1.txt > ex_2.txt
+MacBook-Air-Anna:lesson3 anna$ cat ex_2.txt
+line 1
+line 2
+line 3 
+MacBook-Air-Anna:lesson3 anna$ vim ex_2.txt
+MacBook-Air-Anna:lesson3 anna$ cat ex_2.txt >>ex_1.txt
+MacBook-Air-Anna:lesson3 anna$ cat ex_1.txt
+line 1
+line 2
+line 3 
+line A
+line B
+line C 
+MacBook-Air-Anna:lesson3 anna$ cat ex_1.txt ex_2.txt > ex_3.txt
+MacBook-Air-Anna:lesson3 anna$ cat ex_3.txt
+line 1
+line 2
+line 3 
+line A
+line B
+line C 
+line A
+line B
+line C 
+MacBook-Air-Anna:lesson3 anna$ diff ex_1.txt ex_3.txt
+6a7,9
+> line A
+> line B
+> line C 
+MacBook-Air-Anna:lesson3 anna$ cat ex_3.txt | more
+line 1
+line 2
+line 3 
+line A
+line B
+line C 
+line A
+line B
+line C 
+MacBook-Air-Anna:lesson3 anna$
