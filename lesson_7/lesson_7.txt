@@ -1,0 +1,17 @@
+MacBook-Air-Anna:~ anna$ ls lesson7/ | grep '.py$'
+mytest.py
+test1.py
+MacBook-Air-Anna:~ anna$ ls lesson7/ | grep "^t .py$"
+MacBook-Air-Anna:~ anna$ ls lesson7/ | grep '^t*.py$'
+MacBook-Air-Anna:~ anna$ ls lesson7/ | grep '^t.*.py$'
+test1.py
+MacBook-Air-Anna:~ anna$ cat test1.py | grep 'print*'
+cat: test1.py: No such file or directory
+MacBook-Air-Anna:~ anna$ cat lesson7/test1.py | grep 'print*'
+print(1)
+MacBook-Air-Anna:~ anna$ ls lesson7/
+file1		myfile_1	myfile_2	mytest.py	script.awk	test1.py
+MacBook-Air-Anna:~ anna$ cat lesson7/mytest.py | grep 'print*'
+	print(i)
+MacBook-Air-Anna:~ anna$ uptime | sed -E 's/^[^,]*up *//; s/, *[[:digit:]]* users.*//; s/([[:digit:]]+):0?([[:digit:]]+)/\1 hours, \2 minutes/' 
+78 days,  2 hours, 28 minutes
