@@ -1,0 +1,428 @@
+
+ubuntu@ip-172-31-41-181:~$ sudo apt install zip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 336 kB of archives.
+After this operation, 1231 kB of additional disk space will be used.
+Do you want to continue? [Y/n] yes
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 unzip amd64 6.0-25ubuntu1 [169 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 zip amd64 3.0-11build1 [167 kB]
+Fetched 336 kB in 0s (2928 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 59624 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-25ubuntu1_amd64.deb ...
+Unpacking unzip (6.0-25ubuntu1) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-11build1_amd64.deb ...
+Unpacking zip (3.0-11build1) ...
+Setting up unzip (6.0-25ubuntu1) ...
+Setting up zip (3.0-11build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+ubuntu@ip-172-31-41-181:~$ sudo file -s
+Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]
+            [--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]
+            [-m <magicfiles>] [-P <parameter=value>] <file> ...
+       file -C [-m <magicfiles>]
+       file [--help]
+ubuntu@ip-172-31-41-181:~$ sudo file -s /ubuntu/home
+/ubuntu/home: cannot open `/ubuntu/home' (No such file or directory)
+ubuntu@ip-172-31-41-181:~$ ls
+ubuntu@ip-172-31-41-181:~$ du
+4	./.cache
+8	./.ssh
+28	.
+ubuntu@ip-172-31-41-181:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       7.7G  1.3G  6.4G  17% /
+devtmpfs        486M     0  486M   0% /dev
+tmpfs           490M     0  490M   0% /dev/shm
+tmpfs            98M  780K   98M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           490M     0  490M   0% /sys/fs/cgroup
+/dev/loop0       97M   97M     0 100% /snap/core/9665
+/dev/loop1       55M   55M     0 100% /snap/core18/1880
+/dev/loop2       72M   72M     0 100% /snap/lxd/16100
+/dev/loop3       29M   29M     0 100% /snap/amazon-ssm-agent/2012
+tmpfs            98M     0   98M   0% /run/user/1000
+ubuntu@ip-172-31-41-181:~$ 
+
+Last login: Thu Jul 30 13:25:56 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MacBook-Air-Anna:~ anna$  cd Desktop/
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ 
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" ubuntu@ec2-18-217-181-244.us-east-2.compute.amazonaws.com
+The authenticity of host 'ec2-18-217-181-244.us-east-2.compute.amazonaws.com (18.217.181.244)' can't be established.
+ECDSA key fingerprint is SHA256:ILXJ3U3PF79CEgPvCNCyhG8N1TG5w9Vx2trFROW+dmc.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+Host key verification failed.
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" ubuntu@ec2-18-217-181-244.us-east-2.compute.amazonaws.com
+The authenticity of host 'ec2-18-217-181-244.us-east-2.compute.amazonaws.com (18.217.181.244)' can't be established.
+ECDSA key fingerprint is SHA256:ILXJ3U3PF79CEgPvCNCyhG8N1TG5w9Vx2trFROW+dmc.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-18-217-181-244.us-east-2.compute.amazonaws.com,18.217.181.244' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.4.0-1018-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Aug  4 15:34:43 UTC 2020
+
+  System load:  0.0               Processes:             99
+  Usage of /:   16.7% of 7.69GB   Users logged in:       0
+  Memory usage: 20%               IPv4 address for eth0: 172.31.41.181
+  Swap usage:   0%
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-41-181:~$ sudo apt install zip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 336 kB of archives.
+After this operation, 1231 kB of additional disk space will be used.
+Do you want to continue? [Y/n] yes
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 unzip amd64 6.0-25ubuntu1 [169 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 zip amd64 3.0-11build1 [167 kB]
+Fetched 336 kB in 0s (2928 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 59624 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-25ubuntu1_amd64.deb ...
+Unpacking unzip (6.0-25ubuntu1) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-11build1_amd64.deb ...
+Unpacking zip (3.0-11build1) ...
+Setting up unzip (6.0-25ubuntu1) ...
+Setting up zip (3.0-11build1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+ubuntu@ip-172-31-41-181:~$ sudo file -s
+Usage: file [-bcCdEhikLlNnprsSvzZ0] [--apple] [--extension] [--mime-encoding]
+            [--mime-type] [-e <testname>] [-F <separator>]  [-f <namefile>]
+            [-m <magicfiles>] [-P <parameter=value>] <file> ...
+       file -C [-m <magicfiles>]
+       file [--help]
+ubuntu@ip-172-31-41-181:~$ sudo file -s /ubuntu/home
+/ubuntu/home: cannot open `/ubuntu/home' (No such file or directory)
+ubuntu@ip-172-31-41-181:~$ ls
+ubuntu@ip-172-31-41-181:~$ du
+4	./.cache
+8	./.ssh
+28	.
+ubuntu@ip-172-31-41-181:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       7.7G  1.3G  6.4G  17% /
+devtmpfs        486M     0  486M   0% /dev
+tmpfs           490M     0  490M   0% /dev/shm
+tmpfs            98M  780K   98M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           490M     0  490M   0% /sys/fs/cgroup
+/dev/loop0       97M   97M     0 100% /snap/core/9665
+/dev/loop1       55M   55M     0 100% /snap/core18/1880
+/dev/loop2       72M   72M     0 100% /snap/lxd/16100
+/dev/loop3       29M   29M     0 100% /snap/amazon-ssm-agent/2012
+tmpfs            98M     0   98M   0% /run/user/1000
+ubuntu@ip-172-31-41-181:~$ exit
+logout
+Connection to ec2-18-217-181-244.us-east-2.compute.amazonaws.com closed.
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" root@ec2-18-216-150-142.us-east-2.compute.amazonaws.com
+The authenticity of host 'ec2-18-216-150-142.us-east-2.compute.amazonaws.com (18.216.150.142)' can't be established.
+ECDSA key fingerprint is SHA256:svo5Gy0jHtHKwPtLO2D/tMWLyPVtVX4yiMUhG2BBKZw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-18-216-150-142.us-east-2.compute.amazonaws.com,18.216.150.142' (ECDSA) to the list of known hosts.
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to ec2-18-216-150-142.us-east-2.compute.amazonaws.com closed.
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" root@ec2-18-216-150-142.us-east-2.compute.amazonaws.com
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to ec2-18-216-150-142.us-east-2.compute.amazonaws.com closed.
+MacBook-Air-Anna:Desktop anna$ cd ~
+MacBook-Air-Anna:~ anna$ desktop/
+-bash: desktop/: is a directory
+MacBook-Air-Anna:~ anna$ cd Desktop/
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ sh -i "aws_1.pem" root@ec2-18-216-150-142.us-east-2.compute.amazonaws.com
+aws_1.pem: line 1: -----BEGIN: command not found
+: command not foundMIIEpAIBAAKCAQEA0K+Ep7hLIQhjwKQexuAEz7fOZ9lx7WsdHm+BMDrPc9VdJCHAOgb+4qx7XpbQ
+: No such file or directoryFSnwCrPAgUSDHt6yAoL3S/6j9EOF9r/B+GpEYJrSeqBxmb0/ONNTowuGaNgTd3KE3Ggh
+: No such file or directoryjiyPMGmHe/kV8uMEgYaQ2QR1I/RsUK92G3PEQoZZ8IY7THhkRUVcU7tWcSMjYc9IjLs4
+: No such file or directoryu4CgXE/amrQrCikLw914PYCRkxzGw4PgMQYmErTx9jmH93F8F4phwBXm9YnhVmo30HsT
+: command not found4RHezKclk5xz0vSkdhtr6YdIaVcl5oSctq9jQmqxtC9Qbnul6Cq2twIDAQABAoIBAQC6dAfnPr9J
+: command not foundjVBrH3gsIp3J5aUynlKvWSPUPLZFnFYcXYdxsAIrFnMHnipAMilgY8UlkUL1t9m0BjS6irdIjpqn
+: command not foundqdJAgQyGQwpfk6dAR9o+IjZqwA2f2jmxkQdKRxLZfC2wbI6Oyy+LYPE6fSRvARsSm0clGkFlGTa+
+: No such file or directory9B/gCx4/yQ7c3Y3qZl+Bk3dG1S4h8pzZBU0vVqrn8JyUKBHivRIV1wWYSXb5goPNY1SY
+: No such file or directoryd/Lp8lChaz7oY3Ca5TpuhN9GboM3VIaYSBOaRZeN/0xccRMqIKWFRKLoK4TKm2JjDmAVv
+: No such file or directoryxgM4XYeQFg1IdyfnIwWohAoGBAO2JOeW4BEYWihSzP5Wd2sePxZMSoPk/ZGHS0jDtPr9g
+: No such file or directorypgOFhv7SfLIWw6QHuf7vBYEdPZ9cdC3CEBgZQxFNrgZaxq0q17Zu4j/Vka7h+hEioAN73
+: command not found Nje9jdfM9hKWNgP7HTd43awK1siLtcn7xr8cxi+VhbftgpNTf8wRAoGBAODoMS5SSq65BeGIXhF0
+: command not found mHVP3L0OVSH+x9O2ZerqxOKnrbsFNqNjA+o6rFeMK2nobUQx6OqpoUm2YgCctH5+E25XSPBlYop5
+: No such file or directoryXz1fySx9gcy30LE2VOMI3wQpm2NXxrVQ/FTzvGJw+F8Ejc1pvw79+KWaiyTKmWk+ofT5H
+: command not found AoGAGus5P3pKKbM2NMBXjVoVSBZX+qHa0kRH2PouTdMlEEUPGfvkERrieyg7tHlxbzksPsbLfPie
+: No such file or directory0riyYDjEq/pUpW22JDu9tHP+eeN3Hg2H7FczMRHhZkZmOsI0Oue6B8pOLrRSqcmvMCXAj
+: No such file or directoryn586XF8/3w0BsNDECgYA4/p53/qKuZHT5EnXENqfsErD9uAQa+VXqcO6i+ZurVJLSMiAG
+: command not found h7EWSogiJ4NY8229OmisDxCwfWeYgB29cHW8IKJ7STYPoYjxe1XzRF1nDB+9c9O8cYRIpOgdT8O7
+: No such file or directorypjtLy/iRec93RNAqngGs6u94CBH64Ny/rv+b9QQKBgQDQ9LNngVbS2NL6inU0/Zc5y4sh
+: No such file or directoryS4qpAvCPJPi24/t8rJOhH+Dvp8L2bJ6uStVLdFBesQAEcE5htPX/8Jd0+SpUCvvVWFp/Z
+: No such file or directorys3Pk6AAu7A5Xyn+/R12foQAQKCF2Yb48lND2f2RXRm4NWBPvaUrfYxkZyWYH+Rw==
+aws_1.pem: line 23: -----END: command not found
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" root@ec2-18-216-150-142.us-east-2.compute.amazonaws.com
+Please login as the user "ubuntu" rather than the user "root".
+
+;    
+exit
+Connection to ec2-18-216-150-142.us-east-2.compute.amazonaws.com closed.
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" root@ec2-18-216-150-142.us-east-2.compute.amazonaws.com
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to ec2-18-216-150-142.us-east-2.compute.amazonaws.com closed.
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" root@ec2-18-216-150-142.us-east-2.compute.amazonaws.com
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to ec2-18-216-150-142.us-east-2.compute.amazonaws.com closed.
+MacBook-Air-Anna:Desktop anna$ chmod300 aws_1.pem
+-bash: chmod300: command not found
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" ubuntu@ec2-18-217-181-244.us-east-2.compute.amazonaws.com
+Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.4.0-1018-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Aug  4 16:01:12 UTC 2020
+
+  System load:  0.0               Processes:             99
+  Usage of /:   16.8% of 7.69GB   Users logged in:       0
+  Memory usage: 20%               IPv4 address for eth0: 172.31.41.181
+  Swap usage:   0%
+
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+Last login: Tue Aug  4 15:34:45 2020 from 45.115.86.12
+ubuntu@ip-172-31-41-181:~$ chmod 400 aws_1.pem
+chmod: cannot access 'aws_1.pem': No such file or directory
+ubuntu@ip-172-31-41-181:~$ ssh -i "aws_1.pem" root@ec2-18-216-150-142.us-east-2.compute.amazonaws.com
+Warning: Identity file aws_1.pem not accessible: No such file or directory.
+ssh: connect to host ec2-18-216-150-142.us-east-2.compute.amazonaws.com port 22: Connection timed out
+ubuntu@ip-172-31-41-181:~$ lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+loop0     7:0    0   97M  1 loop /snap/core/9665
+loop1     7:1    0   55M  1 loop /snap/core18/1880
+loop2     7:2    0 71.3M  1 loop /snap/lxd/16100
+loop3     7:3    0 28.1M  1 loop /snap/amazon-ssm-agent/2012
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0    2G  0 disk 
+ubuntu@ip-172-31-41-181:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 1353628   6695432  17% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         99328   99328         0 100% /snap/core/9665
+/dev/loop1         56320   56320         0 100% /snap/core18/1880
+/dev/loop2         73088   73088         0 100% /snap/lxd/16100
+/dev/loop3         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+tmpfs             100208       0    100208   0% /run/user/1000
+ubuntu@ip-172-31-41-181:~$ sudo file -s /dev/xvdf
+/dev/xvdf: data
+ubuntu@ip-172-31-41-181:~$ sudo mkfs -t xfs /dev/xvdf
+meta-data=/dev/xvdf              isize=512    agcount=4, agsize=131072 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1
+data     =                       bsize=4096   blocks=524288, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+ubuntu@ip-172-31-41-181:~$ sudo file -s /dev/xvdf
+/dev/xvdf: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+ubuntu@ip-172-31-41-181:~$ sudo mkdir data
+ubuntu@ip-172-31-41-181:~$ ls/
+-bash: ls/: No such file or directory
+ubuntu@ip-172-31-41-181:~$ ls /data/
+ls: cannot access '/data/': No such file or directory
+ubuntu@ip-172-31-41-181:~$ sudo mkdir /data
+ubuntu@ip-172-31-41-181:~$ ls/
+-bash: ls/: No such file or directory
+ubuntu@ip-172-31-41-181:~$ mkdir /data
+mkdir: cannot create directory ‘/data’: File exists
+ubuntu@ip-172-31-41-181:~$ sudo mkdir /data
+mkdir: cannot create directory ‘/data’: File exists
+ubuntu@ip-172-31-41-181:~$ ls/
+-bash: ls/: No such file or directory
+ubuntu@ip-172-31-41-181:~$ ls /
+bin   data  etc   lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  dev   home  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+ubuntu@ip-172-31-41-181:~$ ls /data/
+ubuntu@ip-172-31-41-181:~$ sudo mount /dev/xvdf /data
+ubuntu@ip-172-31-41-181:~$ ls /data/
+ubuntu@ip-172-31-41-181:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 1353640   6695420  17% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         99328   99328         0 100% /snap/core/9665
+/dev/loop1         56320   56320         0 100% /snap/core18/1880
+/dev/loop2         73088   73088         0 100% /snap/lxd/16100
+/dev/loop3         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+tmpfs             100208       0    100208   0% /run/user/1000
+/dev/xvdf        2086912   47604   2039308   3% /data
+ubuntu@ip-172-31-41-181:~$ cd /data/
+ubuntu@ip-172-31-41-181:/data$ touch test.txt
+touch: cannot touch 'test.txt': Permission denied
+ubuntu@ip-172-31-41-181:/data$ sudo chmod o+w /data/
+ubuntu@ip-172-31-41-181:/data$ touch test.txt
+ubuntu@ip-172-31-41-181:/data$ ls -ld
+drwxr-xrwx 2 root root 22 Aug  4 16:15 .
+ubuntu@ip-172-31-41-181:/data$ ls -la
+total 4
+drwxr-xrwx  2 root   root     22 Aug  4 16:15 .
+drwxr-xr-x 20 root   root   4096 Aug  4 16:11 ..
+-rw-rw-r--  1 ubuntu ubuntu    0 Aug  4 16:15 test.txt
+ubuntu@ip-172-31-41-181:/data$ ls
+test.txt
+ubuntu@ip-172-31-41-181:/data$ cat /etc/fstab
+LABEL=cloudimg-rootfs	/	 ext4	defaults,discard	0 0
+ubuntu@ip-172-31-41-181:/data$ sudo cp .etc.fstab /etc/fstab.orig
+cp: cannot stat '.etc.fstab': No such file or directory
+ubuntu@ip-172-31-41-181:/data$ sudo cp /etc/fstab /etc/fstab.orig
+ubuntu@ip-172-31-41-181:/data$ blkid
+/dev/xvda1: LABEL="cloudimg-rootfs" UUID="9451d968-8716-47ca-84d5-68b5c79f61e8" TYPE="ext4" PARTUUID="15e6b846-01"
+ubuntu@ip-172-31-41-181:/data$ cd ~
+ubuntu@ip-172-31-41-181:~$ sudo fine /-iname*.app
+sudo: fine: command not found
+ubuntu@ip-172-31-41-181:~$ cd /data/
+ubuntu@ip-172-31-41-181:/data$ cd ~
+ubuntu@ip-172-31-41-181:~$ brew list
+
+Command 'brew' not found, did you mean:
+
+  command 'qbrew' from deb qbrew (0.4.1-8build1)
+  command 'brec' from deb bplay (0.991-10build1)
+
+Try: sudo apt install <deb name>
+
+ubuntu@ip-172-31-41-181:~$ sudp apr install synaptic
+
+Command 'sudp' not found, did you mean:
+
+  command 'sup' from deb sup (20100519-1build1)
+  command 'sudo' from deb sudo (1.8.31-1ubuntu1)
+  command 'sudo' from deb sudo-ldap (1.8.31-1ubuntu1)
+  command 'sfdp' from deb graphviz (2.42.2-3build2)
+
+Try: sudo apt install <deb name>
+
+ubuntu@ip-172-31-41-181:~$ sudo apt install synaptic
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package synaptic is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'synaptic' has no installation candidate
+ubuntu@ip-172-31-41-181:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-41-181:~$ ls /data/
+test.txt
+ubuntu@ip-172-31-41-181:~$ sudo umount /data
+ubuntu@ip-172-31-41-181:~$ ls /data/
+ubuntu@ip-172-31-41-181:~$ exit
+logout
+Connection to ec2-18-217-181-244.us-east-2.compute.amazonaws.com closed.
+MacBook-Air-Anna:Desktop anna$ chmod 400 aws_1.pem
+MacBook-Air-Anna:Desktop anna$ ssh -i "aws_1.pem" ubuntu@ec2-18-217-181-244.us-east-2.compute.amazonaws.com
+
+Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.4.0-1018-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Aug  4 16:32:06 UTC 2020
+
+  System load:  0.04              Processes:             102
+  Usage of /:   16.8% of 7.69GB   Users logged in:       0
+  Memory usage: 18%               IPv4 address for eth0: 172.31.41.181
+  Swap usage:   0%
+
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+Last login: Tue Aug  4 16:01:13 2020 from 45.115.86.12
+ubuntu@ip-172-31-41-181:~$ 
+ubuntu@ip-172-31-41-181:~$ blkid
+/dev/xvda1: LABEL="cloudimg-rootfs" UUID="9451d968-8716-47ca-84d5-68b5c79f61e8" TYPE="ext4" PARTUUID="15e6b846-01"
+/dev/xvdf: UUID="29732f24-5bcc-4ad4-9315-d5888167b388" TYPE="xfs"
+ubuntu@ip-172-31-41-181:~$ vim /etc/fstab
+ubuntu@ip-172-31-41-181:~$ sudo vim /etc/fstab
+ubuntu@ip-172-31-41-181:~$ sudo mount -a
+ubuntu@ip-172-31-41-181:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 1353968   6695092  17% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     776     99436   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop2         56320   56320         0 100% /snap/core18/1880
+/dev/loop0         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop1         99328   99328         0 100% /snap/core/9665
+/dev/loop3         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+/dev/xvdf        2086912   47604   2039308   3% /data
+ubuntu@ip-172-31-41-181:~$ sudo umount /data
+ubuntu@ip-172-31-41-181:~$ ^C
+ubuntu@ip-172-31-41-181:~$ 
